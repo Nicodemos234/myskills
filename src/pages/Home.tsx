@@ -27,7 +27,7 @@ export function Home() {
       name: newSkill
     }
 
-    
+
     setMySkills(oldState => [...oldState, data]);
   }
 
@@ -38,7 +38,7 @@ export function Home() {
     }
     else if (currentHour >= 12 && currentHour < 18) {
       setGreeting('Good afternoon');
-    }else {
+    } else {
       setGreeting('Good night');
     }
   }, []);
@@ -54,7 +54,10 @@ export function Home() {
         placeholderTextColor="#555"
         onChangeText={setNewSkill}
       />
-      <Button onPress={handleAddNewSkill} />
+      <Button
+        title="Add"
+        onPress={handleAddNewSkill}
+      />
       <Text style={[styles.title, { marginVertical: 50 }]}>
         My skills
       </Text>
